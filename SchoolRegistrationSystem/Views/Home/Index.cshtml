@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+<main>
+    <div class="container py-4">
+        <div class="p-5 mb-4 bg-light ">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">Start Your Career now</h1>
+                <p class="col-md-8 fs-4">How we work and make a good living is changing. You'll get the most relevant training and up-to-date industry insights to thrive in a modern work environment.</p>
+                <input type="button" class="btn btn-primary btn-lg" value="Register Now" onclick="window.location= '@Url.Action( "Create", "Registrations")'" />
+                
+            </div>
+        </div>
+
+        <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+                <div class="h-100 p-5 text-white bg-dark ">
+                    <h2>Campus Program</h2>
+                    <p>Study in the Classroom or Online and get career-ready in one year or less. We are the School of New Work.</p>
+                    <input type="button" class="btn btn-outline-light" value="Explore More" onclick="window.location= '@Url.Action( "Index", "Courses")'" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="h-100 p-5 bg-light border">
+                    <h2>Get to Know your Instructor</h2>
+                    <p>Right now, students are learning in our Virtual Classroom where they attend scheduled lectures and collaborate with peers and instructors virtually. We crafted this new learning format so you can focus on your goals in an environment that mirrors the structure of on-campus learning.</p>
+                    <input type="button" class="btn btn-outline-secondary" value="Get To know Your Teacher" onclick="window.location= '@Url.Action( "Index", "Instructors")'" />
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+
+   
+</main>

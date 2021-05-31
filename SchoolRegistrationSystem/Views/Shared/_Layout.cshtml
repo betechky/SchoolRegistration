@@ -1,0 +1,115 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SchoolRegistrationSystem</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/GeneralStyle.scss"/>
+    <link rel="stylesheet" href="~/css/DarkerNavBar.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-graduation-cap fa-lg mr-2"></i>Hazel College</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="nvbCollapse"
+                        target="#nvbCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="nvbCollapse" class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item pl-1 ">
+                            <a class="nav-link menuLink" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-home fa-fw mr-1"></i>Home</a>
+                        </li>
+                        <li class="nav-item  pl-1">
+                            <a class="nav-link menuLink" asp-area="" asp-controller="Registrations" asp-action="Index"><i class="fa fa-th-list fa-fw mr-1"></i>Registration</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link menuLink" asp-area="" asp-controller="Students" asp-action="Index"><i class="fa fa-users fa-fw mr-1"></i>Student</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link menuLink" asp-area="" asp-controller="Courses" asp-action="Index"><i class="fa fa-book fa-fw mr-1"></i>Course</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link menuLink" asp-area="" asp-controller="Instructors" asp-action="Index"><i class="fa fa-user-plus fa-fw mr-1"></i>Instructor</a>
+                        </li>
+                        <li class="nav-item pl-1">
+                            <a class="nav-link menuLink" asp-area="" asp-controller="Home" asp-action="Privacy"><i class="fa fa fa-user-secret fa-fw mr-1"></i>Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container ">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <!--- Footer --->
+    <footer>
+        <div class="jumbotron jumbotron-fluid bg-secondary p-4 mt-4 mb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
+                        <div class="card bg-secondary border-0">
+                            <div class="card-body text-light text-center">
+                                <h5 class="card-title text-white display-4" style="font-size:30px">Hazel Dino</h5>
+                                <p class="d-inline lead">
+                                    &copy; 2021 - SchoolRegistrationSystem - <a asp-area="" asp-controller="Home" asp-action="Privacy" style="color:white">Privacy</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi">
+                        <div class="card bg-secondary border-0">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-white display-4" style="font-size:30px">Contact Us</h5>
+                                <a class="text-light d-block lead" style="margin-left: -20px" href="#"><i class="fa fa-phone mr-2"></i>+1 (204) 225 2336</a>
+                                <a class="text-light d-block lead" href="#"><i class="fa fa-envelope mr-2"></i>admin@hdinocollege.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="card bg-secondary border-0">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-white display-4" style="font-size:30px">Let's Connect</h5>
+
+                                <a class="text-light" href="#"><i class="fa fa-facebook-square fa-fw fa-2x"></i></a>
+
+                                <a class="text-light" href="#"><i class="fa fa-twitter-square fa-fw fa-2x"></i></a>
+
+                                <a class="text-light" href="#"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
+
+                                <a class="text-light" href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+  
+ </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
