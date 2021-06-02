@@ -12,7 +12,7 @@ namespace SchoolRegistrationSystem.Controllers
     public class CoursesController : Controller
     {
         private readonly SchoolRegistrationContext _context;
-        private readonly ISchoolRepository schoolRepository;
+       // private readonly ISchoolRepository schoolRepository;
         public CoursesController(SchoolRegistrationContext context)
         {
             _context = context;
@@ -150,18 +150,22 @@ namespace SchoolRegistrationSystem.Controllers
             return _context.Courses.Any(e => e.CourseId == id);
         }
 
-        // GET: Courses/Edit/5
-        public async Task<IActionResult> EnrolledInCourse(int id)
-        {
-            ////if (CourseId == null)
-            //{
-            //    return NotFound();
-            //}
+        //// GET: Courses/Edit/5
+        //public async Task<IActionResult> EnrolledInCourse(int id)
+        //{
+        
           
-            var courses = await _context.Courses.Where(a => a.CourseId == id).Include(a => a.Students).ToListAsync();
+        //    var courses = await _context.Courses.Where(a => a.CourseId == id).Include(a => a.Students).ToListAsync();
            
-            return View(courses);
-        }
+        //    return View(courses);
+        //}
+
+        //[HttpGet]
+        //public IActionResult GetStudent()
+        //{
+        //    //var courses = _context.Courses;
+        //    //return Ok (courses);
+        //}
         //GET:Courses/EnrolledInCourse/5
         //public async Task<IActionResult> EnrolledInCourse(int CourseId)
         //{

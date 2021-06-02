@@ -46,6 +46,11 @@ namespace SchoolRegistrationSystem.Models
                                             
         }
 
+        //public Students GetByCourse(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         //public IEnumerable<Courses> GetEnrolees(int id)
         //{
         //    var courseDetails = _context.Courses.Where(a => a.CourseId == Courses).Include(a => a.Students).ToListAsync();

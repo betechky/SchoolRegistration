@@ -11,7 +11,10 @@ namespace SchoolRegistrationSystem.Models
         IEnumerable<Students> Search(string SeachStudent);
         IEnumerable<CourseStudentViewModel> GetStudentEnrolled(int id);
         //IEnumerable<Courses> GetEnrolees(int id);
-        public Students GetStudents(int id);
-       
+        //public Students GetStudents(int id);
+        //public async Students GetByCourse(int id);
+     
+
+
     }
 }

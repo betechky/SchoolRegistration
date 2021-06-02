@@ -155,5 +155,14 @@ namespace SchoolRegistrationSystem.Controllers
         {
             return _context.Students.Any(e => e.StudentId == id);
         }
+
+      
+        public async Task<IActionResult> GetByCourse(int id)
+        {
+            var students = _context.Students
+                .Where(s => s.CourseId == id);
+                await _context.Students.FindAsync(id);
+            return PartialView(students);
+        }
     }
 }

@@ -176,3 +176,4 @@ C:\Users\Creative\source\repos\SchoolRegistrationSystem\SchoolRegistrationSystem
 C:\Users\Creative\source\repos\SchoolRegistrationSystem\SchoolRegistrationSystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Creative\source\repos\SchoolRegistrationSystem\SchoolRegistrationSystem\obj\Debug\netcoreapp3.1\SchoolRegistrationSystem.csprojAssemblyReference.cache
 C:\Users\Creative\source\repos\SchoolRegistrationSystem\SchoolRegistrationSystem\obj\Debug\netcoreapp3.1\Razor\Views\Courses\EnrolledInCourse.cshtml.g.cs
+C:\Users\Creative\source\repos\SchoolRegistrationSystem\SchoolRegistrationSystem\obj\Debug\netcoreapp3.1\Razor\Views\Students\GetByCourse.cshtml.g.cs

@@ -50,6 +50,7 @@ namespace SchoolRegistrationSystem.Controllers
         // GET: Registrations/Create
         public IActionResult Create()
         {
+           
             ViewData["CourseId"] = new SelectList(_context.Courses, "CourseId", "CourseName");
             ViewData["InstructorId"] = new SelectList(_context.Instructor, "InstructorId", "EmailAddress");
             ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "FirstName");
@@ -71,7 +72,7 @@ namespace SchoolRegistrationSystem.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CourseId"] = new SelectList(_context.Courses, "CourseId", "CourseName", registration.CourseId);
-            ViewData["InstructorId"] = new SelectList(_context.Instructor, "InstructorId", "EmailAddress", registration.InstructorId);
+            ViewData["InstructorId"] = new SelectList(_context.Instructor, "InstructorId", "FirstName", registration.InstructorId);
             ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "FirstName", registration.StudentId);
             ViewData["StudentType"] = new SelectList(_context.RegType, "StudentType", "RegisterType", registration.StudentType);
             return View(registration);
@@ -91,7 +92,7 @@ namespace SchoolRegistrationSystem.Controllers
                 return NotFound();
             }
             ViewData["CourseId"] = new SelectList(_context.Courses, "CourseId", "CourseName", registration.CourseId);
-            ViewData["InstructorId"] = new SelectList(_context.Instructor, "InstructorId", "EmailAddress", registration.InstructorId);
+            ViewData["InstructorId"] = new SelectList(_context.Instructor, "InstructorId", "FirstName", registration.InstructorId);
             ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "FirstName", registration.StudentId);
             ViewData["StudentType"] = new SelectList(_context.RegType, "StudentType", "RegisterType", registration.StudentType);
             return View(registration);
